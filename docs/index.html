@@ -1,0 +1,300 @@
+<!DOCTYPE HTML>
+<!--
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Stress Detection</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<script src="assets/js/jquery.min.js" type="text/javascript"></script>
+    <script src="assets/js/jssor.slider-22.2.16.mini.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+
+            var jssor_1_SlideshowTransitions = [
+              {$Duration:1200,$Opacity:2}
+            ];
+
+            var jssor_1_options = {
+              $AutoPlay: true,
+              $SlideshowOptions: {
+                $Class: $JssorSlideshowRunner$,
+                $Transitions: jssor_1_SlideshowTransitions,
+                $TransitionsOrder: 1
+              },
+              $ArrowNavigatorOptions: {
+                $Class: $JssorArrowNavigator$
+              },
+              $BulletNavigatorOptions: {
+                $Class: $JssorBulletNavigator$
+              }
+            };
+
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+            /*responsive code begin*/
+            /*remove responsive code if you don't want the slider scales while window resizing*/
+            function ScaleSlider() {
+                var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+                if (refSize) {
+                    refSize = Math.min(refSize, 600);
+                    jssor_1_slider.$ScaleWidth(refSize);
+                }
+                else {
+                    window.setTimeout(ScaleSlider, 20);
+                }
+            }
+            ScaleSlider();
+            $(window).bind("load", ScaleSlider);
+            $(window).bind("resize", ScaleSlider);
+            $(window).bind("orientationchange", ScaleSlider);
+            /*responsive code end*/
+        });
+    </script>
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<span class="logo"><img src="images/ekg-icon-65958.png" alt="" /></span>
+						<h1>Stress Detection</h1>
+						<p>HeartRateStress: Can Heart Rate features detect subjective stress?</p>
+						<a href="#" class="btn">GitHub</a>
+						<a href="#" class="btn">Final Report</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li><a href="#intro" class="active">About Stress</a></li>
+							<li><a href="#application">Application</a></li>
+							<li><a href="#demo">Screenshots</a></li>
+							<li><a href="#milestone">Weekly Progress</a></li>							
+							<li><a href="#team">Meet the team</a></li>
+							<li><a href="#credits">Credits</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Introduction -->
+							<section id="intro" class="main special">
+								<div class="spotlight">
+									<div class="content">
+										<header class="major">
+											<h2 class="stress">Stress</h2>
+										</header>
+										<p class="paratext">Stress is commonly defined as a feeling of strain and pressure. There is evidence that stress is linked with many diseases, playing a crucial role in the development of cardiovascular diseases, diabetes, or asthma, and it also significantly influences the later course of these diseases.</p>
+										<p class="paratext">New fitness trackers claim they can go beyond counting people's steps and measuring how long they sleep — now, these devices can tell people when they're stressed out. The goal is to help people identify the things that trigger their stress, so they can avoid them if possible.</p>
+										<p class="paratext">Most of the devices that offer such stress detection measure the change in the interval between heartbeats — a measure known as heart rate variability. The aim of this project was to focus on determining and analyzing the vital signs which show significant change when a person was stressed.</p>										
+									</div>
+									<span class="image"><img src="images/Stressed.png" alt="" /></span>
+								</div>
+							</section>
+			
+
+						<!-- Second Section -->
+							<section id="application" class="main special">						
+								<div class="spotlight">
+									<div class="content">
+										<header class="major">
+											<h2>Sensors</h2>
+										</header>
+										<p class="content"><b>LG Smart-watch Urbane:</b> This is a commercially available smart-watch which has a heart-rate sensor and can provide an accurate measure of heart-rate. It also has a tri-axial accelerometer, a proximity sensor and a gyroscope. The device provides heart-rate values in the intervals of one second. It sends the data from the smart-watch to the back-end server through Wi-Fi.</p>
+									</div>
+									<span class="image"><img src="images/LG_WATCH_URBANE3.jpg" alt="" /></span>
+								</div>
+								
+								<div class="spotlight">
+									<div class="content">
+										<p class="content"><b>Bio-stamp sensor:</b> The BioStamp Sensor, a body-worn sensor so flexible and soft that it naturally conforms to the contours of the human body. BioStamp Sensors are discreet, allowing study subjects to move from lab to home, through exercise and sleep, remaining unaffected by the tightly-coupled Sensors capturing a wealth of data. It has 3 axis accelerometer that will measure acceleration forces. It also has a heart-rate sensor that will calculate the heart-rate based on the raw ECG sginal.</p>
+									</div>
+									<span class="image"><img src="images/biorc-productpg-sensor.jpg" alt=""/></span>
+								</div>
+								
+								
+								<div class="spotlight">
+									<div class="content">
+										<header class="major">
+											<h2>System</h2>
+										</header>
+										<p class="content">The objective of this project is to determine whether heart rate features would be able to detect subjective stress. This was done by inducing stress in a controlled environment and different features were identified and analyzed. Participants' response to various forms of stressors were recorded and the model was validated.</p>
+									</div>
+									<span class="smartwatch"><img src="images/Smartwatch.png" alt="" /></span>
+								</div>				
+							</section>
+							
+							<section id="demo" class="main special">
+								<div class="spotlight">
+									<div class="content">
+										<header class="major">
+											<h2 class="stress">Screenshots</h2>
+										</header>
+									</div>
+								</div>
+								<div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:600px;height:300px;overflow:hidden;visibility:hidden;">
+									<!-- Loading Screen -->
+									<div data-u="loading" style="position:absolute;top:0px;left:0px;background-color:rgba(0,0,0,0.7);">
+										<div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;">
+										</div>
+										<div style="position:absolute;display:block;background:url('images/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+									</div>
+									<div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:600px;height:300px;overflow:hidden;">
+										<div>
+											<img data-u="image" src="images/stress_protocol.png" />
+										</div>
+										<div>
+											<img data-u="image" src="images/ArithmeticTest.png" />
+										</div>
+										<div>
+											<img data-u="image" src="images/GameTest.png" />
+										</div>
+										<div>
+											<img data-u="image" src="images/ColdPressor.png" />
+										</div>
+										<div>
+											<img data-u="image" src="images/SingASong.png" />
+										</div>
+										<div>
+											<img data-u="image" src="images/StroopTest.png" />
+										</div>
+										<div>
+											<img data-u="image" src="images/NonStressFulAct.png" />
+										</div>
+										<div>
+											<img data-u="image" src="images/Algorithm.png" />
+										</div>
+										<div>
+											<img data-u="image" src="images/MobAppStressed.png" />
+										</div>
+										<div>
+											<img data-u="image" src="images/MobAppNotStressed.png" />
+										</div>										
+										<!-- <a data-u="any" href="http://www.jssor.com" style="display:none">Simple Fade Slideshow</a> -->
+									</div>
+									
+									<div data-u="navigator" class="jssorb05" style="bottom:16px;right:16px;" data-autocenter="1">
+										<div data-u="prototype" style="width:16px;height:16px;"></div>
+									</div>									
+									<span data-u="arrowleft" class="jssora12l" style="top:0px;left:0px;width:30px;height:46px;" data-autocenter="2"></span>
+									<span data-u="arrowright" class="jssora12r" style="top:0px;right:0px;width:30px;height:46px;" data-autocenter="2"></span>
+								</div>
+							</section>
+
+						<!-- Get Started -->
+							<section id="milestone" class="main special">
+								<header class="major">
+									<h2>Weekly Progress</h2>									
+								</header>
+								<div class="features">
+									<article>
+										<a href="#" class="image"><img src="images/9.jpg" alt="" /></a>
+										<div class="inner">											
+											<p><b>Data Analysis:</b>We had to update our protocol to add some actvities which would make the subject be non stressed Eg: Eating, Conversation. We worked more with the Bio-stamp Java code in order to tune the values obtained. The fluctuations did reduce, but it is still under progress. We retrieved some of data logged on to the server and started pre-processing. We decided on some of the features such as mean, standard devaiation, interquartile range etc. Started on implementing a classifier in Weka</p>
+										</div>
+									</article>
+									<article>
+										<a href="#" class="image"><img src="images/8.jpg" alt="" /></a>
+										<div class="inner">											
+											<p><b>Smartwatch application:</b> We developed an Android wear application which can detect the heart rate values and log them on to a back-end server. We tested this at different intervals and on different subjects. We built a smartphone application which could send the data values obtained from the bio-stamp onto the server. We made the application show only the heart rate values and did not include any of the other parameters. We noticed some fluctuations in the readings and are still tweaking those values. We finished the data collection module and tested its correctness and accuracy. We finished the first draft of final paper. We prepared the midterm presentation.</p>
+										</div>
+									</article>
+									<article>
+										<a href="#" class="image"><img src="images/7.jpg" alt="" /></a>
+										<div class="inner">											
+											<p><b>LG Smarthwatch:</b> We decided to have a backup, that is use another sensor in order to check heart rate and decided that LG W150 smartwatch was a good fit. We tried experimenting with the LG W150 smart watch, but it was facing some software issues. Some of the applications were constantly crashing and that's why we need to get our Smartwatch replaced. We recieved a new smart watch and started trying to measure heart rate in the smart watch.</p>
+											
+											<p><b>Bio-stamp:</b>We met Dr. Bass and Mr. Jong also joined in via Skype. He answered some of our questions and also agreed to send us a more documented code to help us understand things further. He agreed to help us in completing our task. While working with the Bio-stamp sensor, we ran into a small issue. While testing the device, one of the electrical wires snapped and the sensor isn't working anymore. We have reached out to Ha-uk, who has agreed to meet us and fix the sensor on Monday. In the mean time we are working on smartwatch and trying to log the heart rate values on to the backend server</p>
+										</div>
+									</article>
+									<article>
+										<a href="#" class="image"><img src="images/6.jpg" alt="" /></a>
+										<div class="inner">											
+											<p><b>Project kick-off:</b> We met with Dr. Bass and his team at the Chicago campus. We learned more about the Bio-Stamp sensor and also spoke to Mr. Ha-uk who fabricated the sensor. We also got some of the Java Code which was being used by the team to obtain heart rate values on an Android Phone.We spoke about the various parameters which can be detected by the sensor and also about how it measures those parameters.</p>
+											
+											<p><b>Code Debugging:</b>The code provided to us was difficult to understand. We spent a lot of time trying to understand what exactly was happening through each module. We met with Dr. Bass where we noted down the parts of code which did not make sense. We setup an appointment with Mr Jong, who wrote this Java code so that he could explain it better</p>
+										</div>
+									</article>
+								</div>								
+							</section>
+							
+							<!-- First Section -->
+							<section id="team" class="main special">
+								<header class="major">
+									<h2>Team</h2>
+								</header>
+								<ul class="features">
+									<li>
+										<span class="teamimage"><img src="images/pradyoth.jpg"></span>
+										<h3>Pradyoth Hegde</h3>
+										<p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
+									</li>
+									<li>
+										<span class="teamimage"><img src="images/sant1.jpg"></span>
+										<h3>Santhosh Subramanian</h3>
+										<p>Santhosh is a graduate student in Information Technology at Northwestern University. Involved in android mobile application development &  database integration.</p>
+									</li>
+									<li>
+										<span class="teamimage"><img src="images/tianju.jpg"></span>
+										<h3>Tianju Ma</h3>
+										<p>Tianju Ma is a master student of Northwestern University, majoring in Computer Engineering. Worked on theoretical analysis of data processing, the design of data collection module, preparation of presentation, as well as paper polishment.</p>
+									</li>
+								</ul>								
+							</section>
+							
+							<section id="credits" class="main special">
+								<div class="spotlight">
+									<div class="content">
+										<header class="major">
+											<h2 class="stress">Special credits</h2>
+										</header>
+										<div class="credits-section">
+										  <p class="creditstext">Northwestern EECS, McCormick Engineering<br/>HABits Lab, Prof. Nabil Alshurafa<br/>Dr. Lauren Wakschlag<br/>Dr. Judith Moskowitz<br/>Dr. Michael Bass<br/>Dr. John Rogers<br/>Ha Uk Chung<br/>Shibo Zhang</p>
+										</div>
+									</div>									
+								</div>
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+					<!--
+						<section>
+							<h2>EECS 395/495: Wireless and Mobile Health</h2>
+							<p>Stress Detection is a mobile application that will predict stress levels based on intended-stress and participant's self report. This project was done under the guidance of Professor Nabil Alshurafa & Dr. Michael Bass </p>							
+						</section>
+						<section>
+							<h2>Contact Us</h2>
+							<dl class="alt">
+								<dt>Address</dt>
+								<dd>680 N. Lakeshore Dr., Suite 1400, Chicago, IL 60611</dd> 
+							</dl>							
+						</section> -->
+						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
